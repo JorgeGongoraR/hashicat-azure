@@ -1,5 +1,5 @@
 resource "azurerm_resource_group" "example-jg" {
-  name     = "my-resources"
+  name     = "my-resources-jg"
   location = "West Europe"
 }
 
