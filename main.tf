@@ -135,12 +135,15 @@ resource "azurerm_virtual_machine" "catapp" {
     disable_password_authentication = false
   }
 
-  tags = {}
+  tags = {
+    "Billable",
+    "Department"
+  }
 
   # Added to allow destroy to work correctly.
   depends_on = [azurerm_network_interface_security_group_association.catapp-nic-sg-ass]
 }
-
+sdsd
 # We're using a little trick here so we can run the provisioner without
 # destroying the VM. Do not do this in production.
 
